@@ -1,0 +1,135 @@
+.gallery{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, rgb(127, 218, 195), rgb(229, 155, 236));
+  min-height: 100vh;
+}
+.gallery .gallery-content{
+  align-items: center;
+  justify-content: space-between;
+}
+section .title{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+section .title::after{
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  padding: 0 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.gallery .title::after{
+  content: "My Photos ";
+}
+
+.mySlides {display: none}
+img {vertical-align: middle; border-top-left-radius: 10px; border-top-right-radius: 10px;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next:hover {
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 50% 10% 10% 50%;
+}
+
+.prev:hover {
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 10% 50% 50% 10%;
+}
+
+.text {
+  color: #ffffff;
+  background-color: #27ecb4;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 0%;
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.numbertext {
+  color: #ff0000;
+  font-size: 19px;
+  font-weight: 700;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(255, 86, 86);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active1, .dot:hover {
+  background-color: #27ecb4;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
